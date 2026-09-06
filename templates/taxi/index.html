@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, ionitial-scale=1" >
-    <title>Taxi Service</title>
-</head>
-<body>
-<h1>Welcome to Taxi-Django service</h1>
-<h3>Current condition:</h3>
-<ul>
-    <li>Drivers: {{num_drivers}}</li>
-    <li>Manufack: {{num_manufacturers}}</li>
-    <li>Cars: {{num_cars}}</li>
-</ul>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+              <h1>Welcome to Taxi-Django service</h1>
+                <h2>Taxi Homepage</h2>
+                <h3>Current condition:</h3>
+                <ul>
+                    <li>Drivers: {{num_drivers}}</li>
+                    <li>Manufack: {{num_manufacturers}}</li>
+                    <li>Cars: {{num_cars}}</li>
+                </ul>
+{% endblock %}
