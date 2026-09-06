@@ -11,6 +11,11 @@ def index(request: HttpRequest) -> HttpResponse:
     num_manufacturers = Manufacturer.objects.count()
     num_cars = Car.objects.count()
     print(f"{num_drivers=}, {num_manufacturers=}, {num_cars=}")
+    context = {
+        "num_drivers": num_drivers,
+        "num_manufacturers": num_manufacturers,
+        "num_cars": num_cars
+    }
 
 
-    return HttpResponse(f"Http request is<br> {request.COOKIES}<br>Hello, world.")
+    return render(request, "base.html", context=context)
